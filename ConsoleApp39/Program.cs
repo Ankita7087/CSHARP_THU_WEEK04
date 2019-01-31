@@ -82,7 +82,25 @@ namespace ConsoleApp39
 
         }
 
-        
+        public void LookForAstrilde()
+        {
+
+            Current = Maple;
+
+            while (Current.nextVillage != null)
+            {
+                if (Current.isAstrildeHere)
+                {
+                    Console.WriteLine("Found Astrilde");
+                    return;
+                }
+                else
+                {
+                    Current = Current.nextVillage;
+                }
+            }
         }
-    
+
+    }
+
 }
